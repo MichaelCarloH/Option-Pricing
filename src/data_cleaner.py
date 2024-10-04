@@ -19,6 +19,21 @@ def clean_data(data):
     
     return cleaned_data
 
+def filter_trading_hours(data):
+    """
+    Filter the data to include only valid trading hours (9:30 AM to 4:00 PM).
+    
+    Parameters:
+    - data: DataFrame containing the stock data
+
+    Returns:
+    - Filtered DataFrame
+    """
+    data.index = pd.to_datetime(data.index)  # Ensure index is datetime
+    data = data.between_time('09:30', '16:00')  # Filter for trading hours
+    data = data[data.index.dayofweek < 5]  # Filter out weekends
+    return data
+
 if __name__ == "__main__":
     # Example usage
     sample_data = pd.DataFrame({
