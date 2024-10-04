@@ -1,5 +1,6 @@
 import yfinance as yf
 import pandas as pd
+from datetime import datetime, timedelta
 
 def fetch_historical_data(ticker, start_date, end_date, interval='1m'):
     """
@@ -19,9 +20,11 @@ def fetch_historical_data(ticker, start_date, end_date, interval='1m'):
 
 if __name__ == "__main__":
     # Example usage
+    # Define the date range
+    end_date = datetime.now().date()
+    start_date = end_date - timedelta(days=7)  # Fetch the last week of data
     ticker = 'SPY'
-    start_date = '2023-01-01'
-    end_date = '2023-01-02'
+    
     spy_data = fetch_historical_data(ticker, start_date, end_date, interval='1m')
     
     print(spy_data.head())
