@@ -1,6 +1,7 @@
 from src.data_fetcher import fetch_historical_data, save_data_to_csv, load_data_from_csv
 from src.data_cleaner import clean_data, filter_trading_hours
-from src.analysis import plot_price_data, calculate_log_returns, calculate_volatility
+from src.analysis_price_time import plot_price_data, calculate_log_returns, calculate_volatility
+from src.analysis_volume_time import plot_volume_over_time
 from datetime import datetime, timedelta
 
 def main():
@@ -37,6 +38,9 @@ def main():
     
     # Plot price data
     plot_price_data(cleaned_data)
+
+    #Plot volume data
+    plot_volume_over_time(cleaned_data)
 
     # Display the cleaned data
     print(cleaned_data.head())
