@@ -12,9 +12,10 @@ class CustomInstallCommand(install):
 
 setup(
     name="tiny_pricing_utils",  # Package name
-    version="0.2",  # Version of the package
+    version="0.4",  # Version of the package
     packages=find_packages(),  # This automatically finds your package
     description="A set of utility functions for my project",
+    repository="https://github.com/MichaelCarloH/Option-Pricing",
     long_description=open('README.md').read(),  # Read your README file
     long_description_content_type="text/markdown",  # The format of your README
     author="Your Name",

@@ -13,7 +13,8 @@ To install the package, you can clone the repository or use `pip`:
 
 ## Documentation
 
-Description of usgae is inside individual files
+The full documentation can be found at: [https://michaelcarloh.github.io/Option-Pricing/](https://michaelcarloh.github.io/Option-Pricing/)
+
 
 ### Clone the repository:
 ```bash

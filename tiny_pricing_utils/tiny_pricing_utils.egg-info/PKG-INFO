@@ -1,6 +1,6 @@
 Metadata-Version: 2.2
 Name: tiny_pricing_utils
-Version: 0.2
+Version: 0.4
 Summary: A set of utility functions for my project
 Author: Your Name
 Author-email: michael.carlo@outlook.it
@@ -10,12 +10,14 @@ Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Requires-Dist: sphinx
 Dynamic: author
 Dynamic: author-email
 Dynamic: classifier
 Dynamic: description
 Dynamic: description-content-type
 Dynamic: license
+Dynamic: requires-dist
 Dynamic: summary
 
 # My Utils Package
@@ -33,7 +35,8 @@ To install the package, you can clone the repository or use `pip`:
 
 ## Documentation
 
-Description of usgae is inside individual files
+The full documentation can be found at: [https://michaelcarloh.github.io/Option-Pricing/](https://michaelcarloh.github.io/Option-Pricing/)
+
 
 ### Clone the repository:
 ```bash
