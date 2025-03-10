@@ -3,6 +3,7 @@
 This repository contains various models and techniques for pricing financial options. The focus is on implementing the Black-Scholes model, visualizing implied volatility surfaces, and utilizing Monte Carlo simulations for exotic option pricing.
 
 ## Folder Structure:
+### 'Option pricing/'
 
 ### `Black_Scholes_Pricing`
    - This folder contains notebooks related to the Black-Scholes option pricing model.
