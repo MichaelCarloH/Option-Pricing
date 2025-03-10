@@ -5,7 +5,7 @@ from .monte_carlo import (
     price_up_and_in_put, 
     price_up_and_out_put
 )
-from .characteristic_function import characteristic_function
+from .characteristic_function import cf_BlackScholes, cf_Heston
 
 __all__ = [
     "black_scholes_price", "sum_squared_diff", 
