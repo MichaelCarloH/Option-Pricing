@@ -10,6 +10,12 @@ This repository contains various models and techniques for pricing financial opt
    - **`implied_vol_surface.ipynb`**: Finds and visualizes the implied volatility surface based on market data.
    - **`exotic_montecarlo_pricing.ipynb`**: Implements Monte Carlo simulations for pricing Asian and Barrier options.
 
+### `Heston_Pricing`
+   - This folder contains notebooks and scripts related to option pricing using the **Heston model** and numerical integration methods.
+   - **`Heston_FFT_pricing.ipynb`**: Implements call option pricing using the Heston model.
+   - **`Carr_Madan_formula.ipynb`**: Uses the Carr-Madan formula with **Rectangular Rule** and **Simpson's Rule** for pricing options under the Heston model.
+   - **`BS_FFT_pricing.ipynb`**: Implements call option pricing using the Black-Scholes model.
+
 ## Requirements:
 - Python 3.x
 - Necessary libraries: `numpy`, `pandas`, `matplotlib`, `scipy`, `ipython`, etc.
