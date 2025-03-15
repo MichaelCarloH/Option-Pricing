@@ -1,0 +1,51 @@
+Metadata-Version: 2.2
+Name: tiny_pricing_utils
+Version: 0.5
+Summary: A set of utility functions for my project
+Home-page: https://github.com/MichaelCarloH/Option-Pricing/tree/main/tiny_pricing_utils
+Author: Michael Carlo
+Author-email: michael.carlo@outlook.it
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# My Utils Package
+
+A draft Python package containing utility functions to price options using Black Scholes and Heston model. This package is designed to be simple, efficient, and reusable across different projects.
+
+## Features
+- Utility functions for pricing options
+- Helper functions for computing characteristic function
+- Easy-to-use and modular
+
+## Installation
+
+To install the package, you can clone the repository or use `pip`:
+
+## Documentation
+
+The full documentation can be found at: [https://michaelcarloh.github.io/Option-Pricing/](https://michaelcarloh.github.io/Option-Pricing/)
+
+
+### Clone the repository:
+```bash
+git clone https://github.com/MichaelCarloH/Option-Pricing.git
+cd tiny_pricing_utils
+python setup.py install

@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include tiny_pricing_utils *
+recursive-include tests *

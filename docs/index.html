@@ -1,187 +1,38 @@
-<!DOCTYPE html>
-
-<html lang="en" data-content_root="./">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Welcome to the Option Pricing Utils Documentation! &#8212; tiny_pricing_utils 0.2.1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
-    <script src="_static/documentation_options.js?v=37f418d5"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Black-Scholes Model" href="black_scholes.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-
-  
-  
-
-  </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
-
-          <div class="body" role="main">
-            
-  <section id="welcome-to-the-option-pricing-utils-documentation">
-<h1>Welcome to the Option Pricing Utils Documentation!<a class="headerlink" href="#welcome-to-the-option-pricing-utils-documentation" title="Link to this heading">¶</a></h1>
-<p>This library contains utilities for option pricing, including Black-Scholes, Monte Carlo simulations, and characteristic functions. Below is the overview of the main modules and their functionality.</p>
-<section id="contents">
-<h2>Contents:<a class="headerlink" href="#contents" title="Link to this heading">¶</a></h2>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="black_scholes.html">Black-Scholes Model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="black_scholes.html#key-assumptions">Key Assumptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="black_scholes.html#black-scholes-formula">Black-Scholes Formula</a></li>
-<li class="toctree-l2"><a class="reference internal" href="black_scholes.html#applications">Applications</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="characteristic_function.html">Characteristic Function</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="characteristic_function.html#definition">Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="characteristic_function.html#application-in-option-pricing">Application in Option Pricing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="characteristic_function.html#fourier-transform-option-pricing">Fourier Transform Option Pricing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="montecarlo.html">Monte Carlo Method</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="montecarlo.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="montecarlo.html#applications-in-finance">Applications in Finance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="montecarlo.html#monte-carlo-for-option-pricing">Monte Carlo for Option Pricing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="montecarlo.html#formula-for-geometric-brownian-motion-gbm">Formula for Geometric Brownian Motion (GBM)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="montecarlo.html#advantages-and-limitations">Advantages and Limitations</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</section>
-</section>
-<section id="black-scholes-py">
-<h1>black_scholes.py<a class="headerlink" href="#black-scholes-py" title="Link to this heading">¶</a></h1>
-<p>The <cite>black_scholes.py</cite> module provides the implementation of the Black-Scholes pricing model with dividends.</p>
-<section id="functions">
-<h2>Functions:<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
-<ol class="arabic simple">
-<li><p><cite>black_scholes_price(S, K, T, r, q, sigma, option_type)</cite>: Computes the price of European call and put options under the Black-Scholes model.</p></li>
-<li><p><cite>sum_squared_diff(sigma, S0, K, T, r, q, market_prices, option_type)</cite>: Calculates the sum of squared differences between model prices and market prices for calibration.</p></li>
-</ol>
-</section>
-</section>
-<section id="characteristic-function-py">
-<h1>characteristic_function.py<a class="headerlink" href="#characteristic-function-py" title="Link to this heading">¶</a></h1>
-<p>The <cite>characteristic_function.py</cite> module contains functions for computing characteristic functions under the Black-Scholes and Heston models.</p>
-<section id="id1">
-<h2>Functions:<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
-<ol class="arabic simple">
-<li><p><cite>cf_BlackScholes(u, S0, r, q, sigma, T)</cite>: Computes the characteristic function for the Black-Scholes model.</p></li>
-<li><p><cite>cf_Heston(u, S0, r, q, V0, kappa, eta, theta, rho, T)</cite>: Computes the characteristic function for the Heston model, incorporating stochastic volatility.</p></li>
-</ol>
-</section>
-</section>
-<section id="montecarlo-py">
-<h1>montecarlo.py<a class="headerlink" href="#montecarlo-py" title="Link to this heading">¶</a></h1>
-<p>The <cite>montecarlo.py</cite> module includes Monte Carlo simulations for pricing different types of options.</p>
-<section id="id2">
-<h2>Functions:<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
-<ol class="arabic simple">
-<li><p><cite>simulate_stock_paths(S0, r, q, sigma, T, N, M)</cite>: Simulates stock price paths using the geometric Brownian motion model.</p></li>
-<li><p><cite>price_asian_call(S0, K, r, q, sigma, T, N, M)</cite>: Prices an Asian call option using Monte Carlo simulation.</p></li>
-<li><p><cite>price_up_and_in_put(S0, K, H, r, q, sigma, T, N, M)</cite>: Prices an up-and-in put option using Monte Carlo simulation.</p></li>
-<li><p><cite>price_up_and_out_put(S0, K, H, r, q, sigma, T, N, M)</cite>: Prices an up-and-out put option using Monte Carlo simulation.</p></li>
-</ol>
-</section>
-</section>
-<section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
-<p>To install the package, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>option-pricing-utils
-</pre></div>
-</div>
-</section>
-<section id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h1>
-<p>To use the module, import the functions as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">black_scholes</span><span class="w"> </span><span class="kn">import</span> <span class="n">black_scholes_price</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">montecarlo</span><span class="w"> </span><span class="kn">import</span> <span class="n">price_asian_call</span>
-</pre></div>
-</div>
-</section>
-
-
-          </div>
-          
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="#">tiny_pricing_utils</a></h1>
-
-
-
-
-
-
-
-
-
-<search id="searchbox" style="display: none" role="search">
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
-<p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="black_scholes.html">Black-Scholes Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="characteristic_function.html">Characteristic Function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="montecarlo.html">Monte Carlo Method</a></li>
-</ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="black_scholes.html" title="next chapter">Black-Scholes Model</a></li>
-  </ul></li>
-</ul>
-</div>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &#169;2025, Michael Carlo.
-      
-      |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
-      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
-      
-      |
-      <a href="_sources/index.rst.txt"
-          rel="nofollow">Page source</a>
-    </div>
-
-    
-
-    
-  </body>
-</html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .wy-nav-side {
+      background-color: #2a2a2a;
+      color: white;
+    }
+    .wy-nav-side a {
+      color: #ddd;
+      text-decoration: none;
+    }
+    .wy-nav-side a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .rst-footer-buttons a {
+      background-color: #3498db;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .rst-footer-buttons a:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
