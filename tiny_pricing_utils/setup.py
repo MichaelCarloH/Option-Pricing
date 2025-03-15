@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="tiny_pricing_utils",
-    version="0.5",
+    version="0.6",
     packages=find_packages(),
     description="A set of utility functions for my project",
     repository="https://github.com/MichaelCarloH/Option-Pricing",
