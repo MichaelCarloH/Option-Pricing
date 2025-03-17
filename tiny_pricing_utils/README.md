@@ -13,11 +13,14 @@ To install the package, you can clone the repository or use `pip`:
 
 ## Documentation
 
-The full documentation can be found at: [https://michaelcarloh.github.io/Option-Pricing/](https://michaelcarloh.github.io/Option-Pricing/)
+The full documentation can be found at: 
+https://option-pricing-1ld1qd386-michael-carlos-projects.vercel.app/
+
+usage: 
+https://michaelcarloh.github.io/Option-Pricing/
 
 
 ### Clone the repository:
 ```bash
 git clone https://github.com/MichaelCarloH/Option-Pricing.git
-cd tiny_pricing_utils
 python setup.py install
