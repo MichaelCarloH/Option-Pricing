@@ -1,6 +1,6 @@
 {
   "name": "@michaelcarloh/tiny_pricing_utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A draft Python package containing utility functions to price options using Black-Scholes and Heston model.",
   "repository": {
     "type": "git",

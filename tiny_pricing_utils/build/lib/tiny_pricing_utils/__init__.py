@@ -6,7 +6,7 @@ from .stock_paths import geometric_brownian_motion, heston_euler, heston_milstei
 
 __all__ = [
     "black_scholes_price", "sum_squared_diff", 
-    "simulate_stock_paths", "price_asian_call", 
+    "price_asian_call", 
     "price_european_call", "price_european_put",
     "price_up_and_in_put", "price_up_and_out_put",
     "price_heston_euler_call", "price_heston_euler_put",
