@@ -1,0 +1,41 @@
+Characteristic Function Calculations
+===================================
+
+This module contains functions for calculating the characteristic functions of the log-stock price under the Black-Scholes and Heston models. These characteristic functions are used in Fourier methods for option pricing.
+
+Functions
+---------
+
+.. function:: cf_BlackScholes(u, S0, r, q, sigma, T)
+
+   Computes the characteristic function of the log-stock price under the Black-Scholes model.
+
+   **Parameters:**
+   - **u** (*complex* or *float*): Fourier transform variable.
+   - **S0** (*float*): Initial stock price.
+   - **r** (*float*): Risk-free rate.
+   - **q** (*float*): Dividend yield.
+   - **sigma** (*float*): Volatility.
+   - **T** (*float*): Time to maturity.
+
+   **Returns:**
+   - (*complex*): Characteristic function value at `u`.
+
+.. function:: cf_Heston(u, S0, r, q, V0, kappa, eta, theta, rho, T)
+
+   Computes the characteristic function of the log-stock price under the Heston model. The Heston model allows for stochastic volatility, where volatility follows a mean-reverting process.
+
+   **Parameters:**
+   - **u** (*complex* or *float*): Fourier transform variable. This is the variable for which the characteristic function is computed.
+   - **S0** (*float*): Initial stock price at time `t = 0`.
+   - **r** (*float*): Risk-free rate.
+   - **q** (*float*): Dividend yield.
+   - **V0** (*float*): Initial variance (starting value for the volatility).
+   - **kappa** (*float*): Rate of mean reversion. Speed at which volatility reverts to its long-term mean (eta).
+   - **eta** (*float*): Long-term mean of volatility.
+   - **theta** (*float*): Volatility of volatility.
+   - **rho** (*float*): Correlation between the stock price and its volatility. Must be between -1 and 1.
+   - **T** (*float*): Time to maturity.
+
+   **Returns:**
+   - (*complex*): Characteristic function value at `u`. This value is used in Fourier inversion to price the option.
