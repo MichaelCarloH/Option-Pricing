@@ -1,8 +1,11 @@
 from setuptools import setup, find_packages
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../tiny_pricing_utils'))
 
 setup(
     name="tiny_pricing_utils",
-    version="0.6",
+    version="1.0.0",
     packages=find_packages(),
     description="A set of utility functions for my project",
     repository="https://github.com/MichaelCarloH/Option-Pricing",

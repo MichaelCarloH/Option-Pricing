@@ -6,15 +6,18 @@ tests/__init__.py
 tests/test_black_scholes.py
 tests/test_characteristic_function.py
 tests/test_heston_model.py
+tests/test_montecarlo_pricing.py
 tests/__pycache__/__init__.cpython-312.pyc
 tests/__pycache__/test_black_scholes.cpython-312-pytest-8.3.5.pyc
 tests/__pycache__/test_characteristic_function.cpython-312-pytest-8.3.5.pyc
 tests/__pycache__/test_heston_model.cpython-312-pytest-8.3.5.pyc
+tests/__pycache__/test_montecarlo_pricing.cpython-312-pytest-8.3.5.pyc
 tiny_pricing_utils/HestonModel.py
 tiny_pricing_utils/__init__.py
 tiny_pricing_utils/black_scholes.py
 tiny_pricing_utils/characteristic_function.py
-tiny_pricing_utils/montecarlo.py
+tiny_pricing_utils/montecarlo_pricing.py
+tiny_pricing_utils/stock_paths.py
 tiny_pricing_utils.egg-info/PKG-INFO
 tiny_pricing_utils.egg-info/SOURCES.txt
 tiny_pricing_utils.egg-info/dependency_links.txt
@@ -26,3 +29,5 @@ tiny_pricing_utils/__pycache__/black_scholes.cpython-312.pyc
 tiny_pricing_utils/__pycache__/characteristic_function.cpython-312.pyc
 tiny_pricing_utils/__pycache__/heston_model.cpython-312.pyc
 tiny_pricing_utils/__pycache__/montecarlo.cpython-312.pyc
+tiny_pricing_utils/__pycache__/montecarlo_pricing.cpython-312.pyc
+tiny_pricing_utils/__pycache__/stock_paths.cpython-312.pyc
